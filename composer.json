@@ -1,0 +1,24 @@
+{
+    "name": "prims47/translate-bundle",
+    "license": "MIT",
+    "type": "symfony bundle",
+    "description": "Symfony2 Prims47TranslateBundle",
+    "keywords": ["symfony2", "bundle", "translate"],
+    "authors": [
+        {
+            "name": "Ilan B",
+            "email": "ilan.prims@gmail.com",
+            "homepage": "http://ilanbenhamou.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": ">=2.2",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "~1.2",
+        "gedmo/doctrine-extensions": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "": "Prims47\\Bundle\\TranslationBundle" }
+    }
+}
