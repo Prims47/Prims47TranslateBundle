@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Prims47\Bundle\TranslateBundle\Doctrine\Common;
+namespace Prims47\TranslateBundle\Doctrine\Common;
 
 use Doctrine\Common\Persistence\ObjectManager;
 

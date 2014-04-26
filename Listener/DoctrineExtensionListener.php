@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace  Prims47\Bundle\TranslateBundle\Listener;
+namespace  Prims47\TranslateBundle\Listener;
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;

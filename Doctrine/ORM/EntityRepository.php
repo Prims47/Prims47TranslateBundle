@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Prims47\Bundle\TranslateBundle\Doctrine\ORM;
+namespace Prims47\TranslateBundle\Doctrine\ORM;
 
 use Doctrine\ORM\EntityRepository as BaseEntityRepository;
 use Doctrine\ORM\QueryBuilder;
