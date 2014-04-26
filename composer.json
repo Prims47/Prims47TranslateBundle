@@ -1,7 +1,7 @@
 {
     "name": "prims47/translate-bundle",
     "license": "MIT",
-    "type": "symfony bundle",
+    "type": "symfony-bundle",
     "description": "Symfony2 Prims47TranslateBundle",
     "keywords": ["symfony2", "bundle", "translate"],
     "authors": [
@@ -19,6 +19,6 @@
         "gedmo/doctrine-extensions": "dev-master"
     },
     "autoload": {
-        "psr-0": { "": "Prims47\\Bundle\\TranslationBundle" }
+        "psr-0": { "": "Prims47\\Bundle\\TranslateBundle" }
     }
 }
