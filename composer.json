@@ -19,5 +19,6 @@
     },
     "autoload": {
         "psr-0": { "": "Prims47\\Bundle\\TranslateBundle" }
-    }
+    },
+    "target-dir": "Prims47/Bundle/TranslateBundle"
 }

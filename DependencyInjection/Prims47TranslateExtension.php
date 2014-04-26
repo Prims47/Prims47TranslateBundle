@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Prims47\TranslateBundle\DependencyInjection;
+namespace Prims47\Bundle\TranslateBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
