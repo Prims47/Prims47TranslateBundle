@@ -83,8 +83,6 @@ services:
             tags:
                 # translatable sets locale after router processing
                 - { name: kernel.event_listener, event: kernel.request, method: onLateKernelRequest, priority: -10 }
-                # loggable hooks user username if one is in security context
-                - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
 
     # Doctrine Extension listeners to handle behaviors
     gedmo.listener.translatable:
