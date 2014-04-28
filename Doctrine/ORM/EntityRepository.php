@@ -42,7 +42,7 @@ class EntityRepository extends BaseEntityRepository
      * @param string       $locale        A locale name
      * @param string       $hydrationMode A Doctrine results hydration mode
      *
-     * @return QueryBuilder
+     * @return mixed
      */
     public function getOneOrNullResult(QueryBuilder $qb, $locale = null, $hydrationMode = null)
     {
@@ -54,9 +54,9 @@ class EntityRepository extends BaseEntityRepository
      *
      * @param QueryBuilder $qb            A Doctrine query builder instance
      * @param string       $locale        A locale name
-     * @param string       $hydrationMode A Doctrine results hydration mode
+     * @param integer      $hydrationMode A Doctrine results hydration mode
      *
-     * @return QueryBuilder
+     * @return array
      */
     public function getResult(QueryBuilder $qb, $locale = null, $hydrationMode = AbstractQuery::HYDRATE_OBJECT)
     {
@@ -70,7 +70,7 @@ class EntityRepository extends BaseEntityRepository
      * @param string       $locale        A locale name
      * @param string       $hydrationMode A Doctrine results hydration mode
      *
-     * @return QueryBuilder
+     * @return mixed
      */
     public function getSingleResult(QueryBuilder $qb, $locale = null, $hydrationMode = null)
     {
