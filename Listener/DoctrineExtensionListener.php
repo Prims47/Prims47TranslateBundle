@@ -28,10 +28,20 @@ class DoctrineExtensionListener implements ContainerAwareInterface
 
     public function onLateKernelRequest(GetResponseEvent $event)
     {
+        $request = $event->getRequest();
+
+        if ($request->getSession()->has('_locale')) {
+            $locale = $request->getSession()->get('_locale');
+        }else {
+            $locale = $request->getLocale();
+        }
+
         $translatable = $this->container->get('gedmo.listener.translatable');
-        $translatable->setTranslatableLocale($event->getRequest()->getLocale());
+        $translatable->setTranslatableLocale($locale);
 
         $symfonyTranslator = $this->container->get('translator');
-        $symfonyTranslator->setLocale($event->getRequest()->getLocale());
+        $symfonyTranslator->setLocale($locale);
+
+        $request->setLocale($locale);
     }
 } 

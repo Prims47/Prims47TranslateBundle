@@ -175,8 +175,8 @@ class BaseManager
         /** @var Session $session */
         $session = $container->get('session');
 
-        if ($session->has('locale')) {
-            $this->getRepository()->setLocale($session->get('locale'));
+        if ($session->has('_locale')) {
+            $this->getRepository()->setLocale($session->get('_locale'));
         } else {
             $this->getRepository()->setLocale($container->get('request')->getLocale());
         }

@@ -41,7 +41,7 @@ public function registerBundles()
 # app/parameters.yml
 parameters:
     # ...
-    locale: en_US # Or "de_DE"; "fr_FR" ...
+    locale: en # Or "de"; "fr" ...
     # ...
 
 ```
@@ -338,7 +338,7 @@ $post = $postManager->find(1);
 
 $post->setTitle('Mon premier titre en français');
 $post->setContent('Mon premier contenu en français');
-$post->setTranslatableLocale('fr_FR');
+$post->setTranslatableLocale('fr');
 
 $postManager->save($post, true);
 
@@ -355,7 +355,7 @@ They are two methods.
 <?php
 
 $session = $this->get('session');
-$session->set('locale', 'fr_FR');
+$session->set('_locale', 'fr');
 
 /** @var PostManager $postManager */
 $postManager = $this->get('acme.demo.post.manager');
