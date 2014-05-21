@@ -41,7 +41,7 @@ public function registerBundles()
 # app/parameters.yml
 parameters:
     # ...
-    locale: en # Or "de"; "fr" ...
+    locale: en_FR # Or "de_DE"; "fr_FR" ...
     # ...
 
 ```
@@ -91,7 +91,7 @@ services:
             - { name: doctrine.event_subscriber, connection: default }
         calls:
             - [ setAnnotationReader, [ @annotation_reader ] ]
-            - [ setDefaultLocale, [ en ] ]
+            - [ setDefaultLocale, [ "%locale%" ] ]
             - [ setTranslationFallback, [ true ] ]
 ```
 
@@ -338,7 +338,7 @@ $post = $postManager->find(1);
 
 $post->setTitle('Mon premier titre en français');
 $post->setContent('Mon premier contenu en français');
-$post->setTranslatableLocale('fr');
+$post->setTranslatableLocale('fr_FR');
 
 $postManager->save($post, true);
 
@@ -355,7 +355,7 @@ They are two methods.
 <?php
 
 $session = $this->get('session');
-$session->set('_locale', 'fr');
+$session->set('_locale', 'fr_FR');
 
 /** @var PostManager $postManager */
 $postManager = $this->get('acme.demo.post.manager');
